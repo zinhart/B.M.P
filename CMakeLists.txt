@@ -12,9 +12,6 @@ endif()
 
 set (BMP_INCLUDE_DIR bmp/include CACHE STRING "BMP INCLUDE DIRS")
 
-
-
-
 # for unit tests using google test
 option(BuildUnitTest "BuildUnitTest" ON)
 # for benchmarking using google bench
