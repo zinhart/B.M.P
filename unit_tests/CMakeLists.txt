@@ -6,6 +6,7 @@
 add_executable(bmp_unit_tests ${bmp_unit_tests_src})
 
 target_link_libraries(bmp_unit_tests 
+					  bmp
 					  gtest
 					  #gmock_main # for google mock
 					  ${CMAKE_THREAD_LIBS_INIT}

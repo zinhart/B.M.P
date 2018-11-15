@@ -10,7 +10,7 @@ if (NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "RELEASE")
 endif()
 
-set (BMP_INCLUDE_DIR bmp/include CACHE STRING "BMP INCLUDE DIRS")
+set (BMP_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE STRING "BMP INCLUDE DIRS")
 
 # for unit tests using google test
 option(BuildUnitTest "BuildUnitTest" ON)
@@ -45,8 +45,6 @@ elseif(PTHREADS AND WIN32_THREADS)
   message(FATAL_ERROR "Choose 1 threading library")
 endif()
  
-include_directories(. include "${BMP_INCLUDE_DIR}" "${PROJECT_BINARY_DIR}")
-
 # set cxx standard
 set(CMAKE_CXX_STANDARD 11)
 # force cxx standard

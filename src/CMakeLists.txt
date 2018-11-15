@@ -2,6 +2,7 @@
 
  add_library(bmp ${LIB_TYPE} ${bmp_lib})
 
+ target_include_directories(bmp PUBLIC ${BMP_INCLUDE_DIR})
  #link cpu threading library
  target_link_libraries(bmp ${CMAKE_THREAD_LIBS_INIT} )
 
